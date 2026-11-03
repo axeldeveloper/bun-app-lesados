@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #fcfbf8;
+  color: #1d2925;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #fcfbf8;
+  color: #1d2925;
+}
+
+::selection {
+  background: #d8f09a;
+  color: #1d3529;
+}
+
+@layer components {
+  .form-label {
+    @apply mb-1.5 block text-sm font-medium text-ink;
+  }
+
+  .form-input {
+    @apply w-full rounded-xl border border-sand-300 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-muted/70 focus:border-forest-500 focus:ring-4 focus:ring-forest-100;
+  }
+
+  .primary-button {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-forest-800 px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-forest-700 focus:outline-none focus:ring-4 focus:ring-forest-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+}
